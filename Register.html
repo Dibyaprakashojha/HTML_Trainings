@@ -1,0 +1,99 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        background-color: aqua;
+        width: 20%;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="http://www.google.co.in" method="get" target="_blank">
+      <table>
+        <tr>
+          <th>Name</th>
+          <td>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter Name"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <th>Password</th>
+          <td>
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter Password"
+              required
+              min="6"
+              max="32"
+              pattern="[A-Za-z0-9!@#$%^&*]{6}"
+            />
+          </td>
+        </tr>
+        <tr>
+          <th>Age</th>
+          <td>
+            <input
+              type="number"
+              name="age"
+              required
+              min="18"
+              max="40"
+              step="2"
+            />
+          </td>
+        </tr>
+        <tr>
+          <th>Gender</th>
+          <td>
+            <input type="radio" name="gender" value="male" required />Male
+            <input type="radio" name="gender" value="female" />Female
+            <input type="radio" name="gender" value="others" />Others
+          </td>
+        </tr>
+        <tr>
+          <th>Course Name</th>
+          <td>
+            <select name="course" id="course">
+              <option value="select" selected>--SELECT--</option>
+              <option value="java">Java</option>
+              <option value="spring">Spring</option>
+              <option value="hibernate">Hibernate</option>
+              <option value="html">HTML</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>Hobby</th>
+          <td>
+            <input type="checkbox" name="hobbies" id="hobbies" />e-Sports
+            <input type="checkbox" name="hobbies" id="hobbies" />Photography
+            <input type="checkbox" name="hobbies" id="hobbies" />Music
+          </td>
+        </tr>
+        <tr>
+          <th>Phone</th>
+          <td><input type="tel" name="phone" id="" pattern="[0-9]{10}" /></td>
+        </tr>
+        <tr>
+          <th></th>
+          <td class="submit">
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
