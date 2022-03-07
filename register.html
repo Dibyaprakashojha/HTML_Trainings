@@ -6,14 +6,22 @@
     <title>Document</title>
     <style>
       form {
-        background-color: aqua;
+        background-color: rgb(30, 192, 30);
         width: 26%;
         margin: 0 auto;
+      }
+      h2 {
+        text-align: center;
+      }
+      form button:hover {
+        background: rgb(243, 7, 7);
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
     <form action="register.html" method="get" target="_blank">
+      <h2>Registration Form</h2>
       <table>
         <tr>
           <th>Name</th>
@@ -36,7 +44,7 @@
               name="password"
               placeholder="Enter Password"
               required
-              pattern="[A-Za-z0-9!@#$%^&*]{6,}"
+              pattern="[A-Za-z0-9!@#$%^&*]{5,15}"
             />
           </td>
         </tr>
@@ -47,8 +55,8 @@
               type="number"
               name="age"
               required
-              min="18"
-              max="40"
+              min="20"
+              max="80"
               step="2"
             />
           </td>
@@ -56,8 +64,13 @@
         <tr>
           <th>Gender</th>
           <td>
-            <input type="radio" name="gender" value="male" required />Male
-            <input type="radio" name="gender" value="female" />Female
+            <input
+              type="radio"
+              name="gender"
+              value="male"
+              required
+              checked
+            />Male <input type="radio" name="gender" value="female" />Female
             <input type="radio" name="gender" value="others" />Others
           </td>
         </tr>
@@ -86,10 +99,16 @@
           <td><input type="tel" name="phone" id="" pattern="[0-9]{10}" /></td>
         </tr>
         <tr>
+          <th>D.O.B</th>
+          <td>
+            <input type="date" name="date" id="date" min="1998-01-01" />
+          </td>
+        </tr>
+        <tr>
           <th></th>
-          <td class="submit">
-            <input type="submit" value="Submit" />
-            <input type="reset" value="Reset" />
+          <td>
+            <button type="submit">Register !</button>
+            <button type="reset">Reset</button>
           </td>
         </tr>
       </table>
