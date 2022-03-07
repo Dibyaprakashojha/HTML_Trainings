@@ -7,13 +7,13 @@
     <style>
       form {
         background-color: aqua;
-        width: 20%;
+        width: 26%;
         margin: 0 auto;
       }
     </style>
   </head>
   <body>
-    <form action="http://www.google.co.in" method="get" target="_blank">
+    <form action="register.html" method="get" target="_blank">
       <table>
         <tr>
           <th>Name</th>
@@ -24,6 +24,7 @@
               id="name"
               placeholder="Enter Name"
               required
+              pattern=".{5,15}"
             />
           </td>
         </tr>
@@ -35,9 +36,7 @@
               name="password"
               placeholder="Enter Password"
               required
-              min="6"
-              max="32"
-              pattern="[A-Za-z0-9!@#$%^&*]{6}"
+              pattern="[A-Za-z0-9!@#$%^&*]{6,}"
             />
           </td>
         </tr>
